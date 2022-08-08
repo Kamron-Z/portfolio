@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navItem{
+  padding: 5px;
+
+  .navLink {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+    text-decoration: none;
+
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 2px;
+      background-color: var(--color-black);
+      margin-top: 5px;
+      transition: .2s all;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modalContainer {
+  width: 470px;
+  height: 676px;
+  background: var(--color-white);
+}
